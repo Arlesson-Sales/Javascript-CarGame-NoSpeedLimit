@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta name="author" content="Arlesson sales">
+    <meta name="keywords" content="car, game, pixel">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>No Speed Limit</title>
+    <link rel="icon" href="assets/car-yellow-down.png" type="image/x">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body onload="game.preload()">
+    <main>
+      <section class="gameContainer">
+        
+        <div class="gameScreen" id="gameScreen">
+          <canvas class="gameScreen" id="canvas"></canvas>
+          <div class="screen" id="gameMenu">
+            <div class="gameTitle">
+              <h1>
+                <span class="word-1">No</span>
+                <span class="word-2">Speed</span>
+                <span class="word-3">Limit</span>
+              </h1>
+            </div>
+            <div class="gameMenuDiv">
+              <p><button class="menuButton" onclick="game.start()">Start</button></p>
+              <p><button class="menuButton" onclick="game.interface.showScreen('selectCar')">Select Car</button></p>
+              <p class="bestScore" id="bestScore">Best Score: 0</p>
+            </div>
+          </div>
+          <div class="screen" id="selectCarMenu">
+            <div class="carShowcase" id="carShowcase"></div>
+          </div>
+          <div class="screen" id="loseScreen">
+            <div class="loseScreen">
+              <div>
+                <h1>You lose!</h1>
+                <h2 id="finalScoreMessage">Your score was:</h2>
+                <p id="finalScore">0</p>
+              </div>
+              <div>
+                <button onclick="game.start()" id="one" class="menuButton">Try again</button>
+                <button onclick="game.interface.showScreen('menu')" id="two" class="menuButton">Back to menu</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="gameHUD">
+          <div id="score">Score: 0</div>
+          <div id="level">Level: 0</div>
+        </div>
+        
+        <div class="gameControls">
+          <div class="top">
+            <div class="buttonControl topArrow"></div>
+          </div>
+          <div class="center">
+            <div class="buttonControl leftArrow"></div>
+            <div class="buttonControl rightArrow"></div>
+          </div>
+          <div class="bottom">
+            <div class="buttonControl bottomArrow"></div>
+          </div>
+        </div>
+        
+      </section>
+    </main>
+    <script src="class-entity.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>
