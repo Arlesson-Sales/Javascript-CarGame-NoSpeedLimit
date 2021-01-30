@@ -302,6 +302,7 @@ const game = {
     this.player.y = 400;
     this.player.setSprite(`assets/car-${this.playerColor}-top.png`);
     
+    this.player.loadSprite();
     this.player.render();
   },
   
