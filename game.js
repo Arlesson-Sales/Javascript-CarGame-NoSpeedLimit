@@ -346,6 +346,9 @@ const game = {
     
     this.unlockPoliceCar();
     this.audio.loadAudio();
+    
+    this.player.setSprite(`assets/car-${this.playerColor}-top.png`);
+    this.player.loadSprite();
   },
   
   start() {
